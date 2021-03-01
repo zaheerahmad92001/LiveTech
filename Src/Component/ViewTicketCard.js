@@ -10,6 +10,7 @@ import { TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture
 
 
 const ViewTicketCard = (props) => {
+    let item = props.item
     return (
         <LinearGradient colors={['white', 'white',]} style={styles.linearGradient}>
             <View style={styles.header}>
@@ -18,7 +19,7 @@ const ViewTicketCard = (props) => {
                     text={'Ticket ID :'} />
                 <MediumHeading
                     mediumTextStyle={{ ...styles.mediumTextStyle, marginLeft: 10 }}
-                    text={'109'} />
+                    text={item.id} />
             </View>
             <Card style={styles.cardStyle}>
                 <View style={styles.cardContent}>
@@ -27,7 +28,7 @@ const ViewTicketCard = (props) => {
                         mediumTextStyle={styles.heading}
                     />
                     <SmallText
-                        text={'Suject'}
+                        text={item.subject}
                         smallTextStyle={styles.smallTextStyle}
                     />
                 </View>
@@ -37,7 +38,7 @@ const ViewTicketCard = (props) => {
                         mediumTextStyle={styles.heading}
                     />
                     <SmallText
-                        text={'2021-02-10'}
+                        text={item.created_at}
                         smallTextStyle={styles.smallTextStyle}
                     />
                 </View>
@@ -67,7 +68,7 @@ const ViewTicketCard = (props) => {
                         mediumTextStyle={styles.heading}
                     />
                     <SmallText
-                        text={'Install Window , and repair my System'}
+                        text={item.ticket_detail}
                         smallTextStyle={styles.smallTextStyle}
                     />
                 </View>

@@ -32,7 +32,7 @@ function setupRequest(type, reqData,token,dataType) {
       headers: {
 				'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer' + token
+                'Authorization': 'bearer' + token
 			},
     }
     

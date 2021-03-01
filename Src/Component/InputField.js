@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: "center",
         paddingHorizontal: 10,
-        paddingVertical: Platform.OS === 'ios' ? 12 :2,
+        paddingVertical: Platform.OS === 'ios' ? 6 :2,
         zIndex: -10, 
         backgroundColor:'white'
 
